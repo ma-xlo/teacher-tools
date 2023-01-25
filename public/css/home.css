@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(238, 238, 238);
+    font-family:  'Times New Roman', Times, serif;
+    font-size: 16px;
+    margin-top: 80px;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-family: 'Bonheur Royale', cursive;
+    font-size: 79px;
+    margin-bottom: 15px;
+}
+
+.menu-name {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-size: 22px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#home-alt-1:hover{
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1.4));
+}
+
+.container {
+    position: fixed;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.section{
+    background-color: white;
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px;
+    height: 70px;
+    width: 400px;
+    border: 1px solid #888;
+    transition: 0.4s;
+
+}
+
+.section:hover{
+    border: 1px solid #D81E60;
+    outline: none;
+}
+
+.section:hover h2{
+    color: #D81E60;
+
+}
+
+.section:hover p{
+    color: #D81E60;
+
+}
+
+.section:hover .section-icon{
+    fill: #D81E60;
+    stroke: #D81E60;
+}
+
+
+h2{
+    margin-bottom: -10px;
+    margin-left: 100px;
+    font-size: 20px;
+    color: black;
+}
+
+p{
+    margin-left: 100px;
+    font-size: 15px;
+    color: rgb(61, 61, 61);
+}
+
+a:link {
+    text-decoration: none;
+  }
+
+a:visited {
+    text-decoration: none;
+}
+
+.section-icon {
+    float: left;
+    width: 70px;
+    display: block;
+    margin-top: -28px;
+    margin-left: 10px;
+}
+
+.logo-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+}
+
+
+
+

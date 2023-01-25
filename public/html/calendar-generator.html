@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Ruthie&display=swap" rel="stylesheet">
+
+    <title>Gerador de Calendário</title>
+</head>
+<body>
+
+    
+    <form class="form" action="/generate" method="POST">
+
+        <div class="form-group">
+            <label for="name" class="form_label">Aluno(a)</label><br/>
+            <input type="text" name="name" class="form_input name-input" id="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="date" class="form_label">Início das Aulas</label><br/>
+            <input type="date" name="date" class="form_input date-input" required>
+        </div>
+
+        <div class="form-group">
+            <p class="contract-label">Tipo de contrato:</p>
+            <label class="radio">
+                <input type="radio" name="frequency" value="1" required> Uma vez por semana
+            </label>
+            <br>
+            <label class="radio">
+                <input type="radio" name="frequency" value="2" required> Duas vezes por semana
+            </label>
+
+        </div>
+
+        <div class="btn-1">
+            <button class="submit-btn" type="submit">Gerar</button>
+        </div>
+    </form>
+    
+    <a href="/"><h1>Home &#x21A9</h1></a>
+
+</body>
+
+</html>
