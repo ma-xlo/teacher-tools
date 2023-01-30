@@ -89,7 +89,6 @@ export default function docxGen(name, calendarLessons, numberOfLessons, fileName
 
         new Paragraph({children: [emptyLine]}),
         new Paragraph({children: [emptyLine]}),
-        new Paragraph({children: [emptyLine]}),
 
         new Paragraph({
             children: [documentTitle],
@@ -248,6 +247,7 @@ export default function docxGen(name, calendarLessons, numberOfLessons, fileName
                                     }),
                                 ],
                             }),
+                            new Paragraph({children: [emptyLine]}),
                         ],
                     }),
                 },
