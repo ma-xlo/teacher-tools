@@ -15,6 +15,18 @@ h1 {
 
 }
 
+nav h1 {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: 0.4s ease;
+}
+
+nav h1:hover{
+    color: #D81E60;  
+
+}
 
 #home-alt-1:hover{
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1.4));
@@ -61,6 +73,7 @@ h1 {
 }
 
 .submit-btn:active {
+    border: 1px solid rgb(196, 110, 252);
     background-color: rgb(196, 110, 252);
     box-shadow: 3px 3px rgb(161, 161, 161);
     transform: translateY(4px);
@@ -183,3 +196,22 @@ a:link {
 a:visited {
     text-decoration: none;
 }
+
+.message-box{
+    padding: 20px;
+    width: 70%;
+    height: 155px;
+    margin: auto;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.message{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-family: 'Poppins-light',sans-serif;
+    text-align: center;
+    margin-bottom: -10px;
+}
+

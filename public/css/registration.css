@@ -7,8 +7,8 @@
 }
 
 body{
-    margin-top: 290px;
-    margin-bottom: 290px;
+    margin-top: 350px;
+    margin-bottom: 350px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -75,26 +75,38 @@ form .input-box span.details{
     height: 30px;
     width: 100%;
     outline: none;
-    font-size: 16px;
+    color:  #000000;
+    font-size: 18px;
     padding-left: 2px;
     border-bottom-width: 2px;
     transition: all 0.3s ease;
     border: none;
     border-bottom: 1px solid #7a7a7a;
 }
+form .input-box .side-box{
+    font-family: 'Times New Roman', Times, serif;
+    color:  #000000;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+form .side-box span{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color:  #404040;
+    font-weight: 500;
+}
 
 .dropdown {
     font-family: 'Times New Roman', Times, serif;
     height: 30px;
-    width: 50%;
+    width: 90px;
     outline: none;
     font-size: 16px;
-    padding-left: 2px;
-    border-bottom-width: 2px;
     transition: all 0.3s ease;
     border: none;
     border-bottom: 1px solid #7a7a7a;
-    padding-left: 2px;
 }
 
 .user-details .input-box input:hover{
@@ -119,26 +131,6 @@ form .input-box span.details{
     padding-left: 2px;
 }
 
-form .category{
-    display: flex;
-    width: 80%;
-    margin: 14px 0 ;
-    justify-content: space-between;
-}
-form .category label{
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-form .category label .dot{
-    height: 18px;
-    width: 18px;
-    border-radius: 50%;
-    margin-right: 10px;
-    background: #d9d9d9;
-    border: 5px solid transparent;
-    transition: all 0.3s ease;
-}
 form .button{
     height: 45px;
     margin: 35px 0

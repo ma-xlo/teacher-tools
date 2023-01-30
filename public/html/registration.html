@@ -9,6 +9,9 @@
     <title>Cadastrar Aluno</title>
 </head>
     <body>
+        <nav>
+            <a href="/"><h1>Home &#x21A9</h1></a>
+        </nav>
         <div class="container">
                 <div class="content">
                     <form action="/registration" method="POST">
@@ -26,15 +29,23 @@
                                 <span class="details">Profissão</span>
                                 <input type="text" name="occupation" >
                             </div>
-                            <div class="input-box">
-                                <span class="details">Estado Civil</span>
-                                <select class="dropdown" name="maritalStatus" >
+                            <div class="side-box">
+                                <span style="margin-left: 35px;"class="details">Estado Civil</span>
+                                <select style="width: 120px;" class="dropdown" name="maritalStatus" >
                                     <option value=""></option>
-                                    <option value="solteiro">Solteiro</option>
-                                    <option value="casado">Casado</option>
-                                    <option value="separado">Separado</option>
-                                    <option value="divorciado">Divorciado</option>
-                                    <option value="viuvo">Viuvo</option>
+                                    <option value="solteiro (a)">Solteiro (a)</option>
+                                    <option value="casado (a)">Casado (a)</option>
+                                    <option value="separado (a)">Separado (a)</option>
+                                    <option value="divorciado (a)">Divorciado (a)</option>
+                                    <option value="viuvo (a)">Viuvo(a)</option>
+                                </select>
+                            </div>
+                            <div class="side-box">
+                                <span class="details">Gênero</span>
+                                <select class="dropdown" name="genre" >
+                                    <option value=""></option>
+                                    <option value="male">Masculino</option>
+                                    <option value="female">Feminino</option>
                                 </select>
                             </div>
                             <div class="input-box">
@@ -45,16 +56,25 @@
                                 <span class="details">RG</span>
                                 <input type="text" name="rg" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="10" />
                             </div>
-
+                            <div style="width: 500px" class="input-box">
+                                <span class="details">Endereço</span>
+                                <input type="text" name="address" >
+                            </div>
+                            <div style="width: 100px" class="input-box">
+                                <span class="details">Numero</span>
+                                <input type="text" name="addressNumber" >
+                            </div>
+                            <div style="width: 100px" class="input-box">
+                                <span class="details">Cep</span>
+                                <input type="text" name="postalCode" >
+                            </div>
                         </div>
                         <div class="title">Informações do Curso</div>
-
                         <div class="user-details">
                             <div class="input-box">
                                 <span class="details">Duração</span>
                                 <select class="dropdown" name="courseDuration" >
                                     <option value=""></option>
-                                    <option value="2">2 meses</option>
                                     <option value="3">3 meses</option>
                                     <option value="6">6 meses</option>
                                     <option value="12">12 meses</option>
@@ -62,49 +82,46 @@
                             </div>
                             <div class="input-box">
                                 <span class="details">Número de Aulas</span>
-                                <select class="dropdown" name="NumberOfLessons" >
+                                <select class="dropdown" name="numberOfLessons" >
                                     <option value=""> </option>
                                     <option value="22">22 aulas</option>
                                     <option value="42">42 aulas</option>
                                     <option value="84">84 aulas</option>
                                 </select>
                             </div>
-        
                             <div class="input-box input-number">
                                 <span class="details">Início</span>
                                 <input type="date" name="startDate" >
                             </div>
-                                
                             <div class="input-box">
                                 <span class="details">Fim</span>
                                 <input type="date" name="endDate" >
                             </div>
-        
                             <div class="input-box"> 
                                 <span class="details">Começa às</span>
                                 <input type="time" name="startHour" >
                             </div>
-        
                             <div class="input-box"> 
-                                <span class="details">Termina ás</span>
+                                <span class="details">Termina às</span>
                                 <input type="time" name="endHour" >
                             </div>
-
                             <div class="input-box"> 
                                 <span class="details">Valor total</span>
                                 <input type="number" name="totalPrice" placeholder="R$" >
                             </div>
-
                             <div class="input-box"> 
                                 <span class="details">Valor por extenso</span>
-                                <input type="text" name="writeInFull" id="price"  >
+                                <input type="text" name="writeInFull" id="price">
                             </div>
-
+                            <div class="input-box">
+                                <span class="details">Dia do Pagamento</span>
+                                <select class="dropdown" name="payday" id="payday">
+                                </select>
+                            </div>
                             <div class="input-box">
                                 <span class="details">Vezes</span>
-                                <select class="dropdown" name="timesOf" >
+                                <select class="dropdown" name="installments" >
                                     <option value=""> </option>
-                                    <option value="2">2 vezes</option>
                                     <option value="3">3 vezes</option>
                                     <option value="6">6 vezes</option>
                                     <option value="12">12 vezes</option>
@@ -112,10 +129,9 @@
                                 <div><br></div>
                                 <span class="details">De</span>
                                 <div class="input-box"> 
-                                    <input type="number" name="installments" placeholder="R$" >
+                                    <input type="number" name="payments" placeholder="R$" >
                                 </div>
                             </div>
-
                         </div>
                         <div class="button">
                             <input type="submit" value="Cadastrar">
@@ -125,8 +141,10 @@
             </div>
         </div>
     </body>
+    <script>
+        const payday = document.querySelector("#payday");
+                                    
+        payday.innerHTML = `<option value="12">12</option>`;
 
-    <nav>
-        <a href="/"><h1>Home &#x21A9</h1></a>
-    </nav>
+    </script>
 </html>
