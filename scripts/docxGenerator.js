@@ -3,7 +3,7 @@ import pkg from 'docx';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 
-const CELL_SIZE = 2000
+const CELL_SIZE = 2000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -86,16 +86,15 @@ export default function docxGen(name, calendarLessons, numberOfLessons, fileName
     const tableArrays = [];
 
     tableArrays.push(
+
         new Paragraph({children: [emptyLine]}),
         new Paragraph({children: [emptyLine]}),
         new Paragraph({children: [emptyLine]}),
+
         new Paragraph({
             children: [documentTitle],
             alignment: AlignmentType.CENTER,
         }),
-        new Paragraph({children: [emptyLine]}),
-        new Paragraph({children: [emptyLine]}),
-        new Paragraph({children: [emptyLine]}),
     )
 
     for(let i = 0; i < calendarLessons.length; i++) {
@@ -205,6 +204,9 @@ export default function docxGen(name, calendarLessons, numberOfLessons, fileName
             );
         }
         tableArrays.push(
+            
+            new Paragraph({children: [emptyLine]}),
+            new Paragraph({children: [emptyLine]}),
                 
             new Paragraph({
                 children: [
