@@ -113,10 +113,8 @@
                                 <span class="details">Valor por extenso</span>
                                 <input type="text" name="writeInFull" id="price">
                             </div>
-                            <div class="input-box">
+                            <div class="input-box" id="container">
                                 <span class="details">Dia do Pagamento</span>
-                                <select class="dropdown" name="payday" id="payday">
-                                </select>
                             </div>
                             <div class="input-box">
                                 <span class="details">Vezes</span>
@@ -142,9 +140,19 @@
         </div>
     </body>
     <script>
-        const payday = document.querySelector("#payday");
-                                    
-        payday.innerHTML = `<option value="12">12</option>`;
+        
+        let select = document.createElement("select");
+        select.name = "payments";
+        select.className = "dropdown";
+    
+        for (let i = 1; i <= 31; i++) {
+            let option = document.createElement("option");
+            option.value = i;
+            option.text = i;
+            select.appendChild(option);
+        }
+
+        document.getElementById("container").appendChild(select);
 
     </script>
 </html>
