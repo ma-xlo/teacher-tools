@@ -73,7 +73,7 @@ export default function docxGen(name, calendarLessons, numberOfLessons, fileName
 
     const emptyLine = new SymbolRun({
         char: "00",
-        size: 26,
+        size: 30,
         symbolfont: "Calibri",
     });
 
