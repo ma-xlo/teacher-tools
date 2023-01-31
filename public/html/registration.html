@@ -19,19 +19,19 @@
                         <div class="user-details">
                             <div class="input-box">
                                 <span class="details">Nome</span>
-                                <input type="text" name="firstName" >
+                                <input type="text" name="firstName" required>
                             </div>
                             <div class="input-box">
                                 <span class="details">Sobrenome</span>
-                                <input type="text" name="lastName" >
+                                <input type="text" name="lastName" required>
                             </div>
                             <div class="input-box">
                                 <span class="details">Profissão</span>
-                                <input type="text" name="occupation" >
+                                <input type="text" name="occupation" required>
                             </div>
                             <div class="side-box">
                                 <span style="margin-left: 35px;"class="details">Estado Civil</span>
-                                <select style="width: 120px;" class="dropdown" name="maritalStatus" >
+                                <select style="width: 120px;" class="dropdown" name="maritalStatus" required>
                                     <option value=""></option>
                                     <option value="solteiro (a)">Solteiro (a)</option>
                                     <option value="casado (a)">Casado (a)</option>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="side-box">
                                 <span class="details">Gênero</span>
-                                <select class="dropdown" name="genre" >
+                                <select class="dropdown" name="genre" required>
                                     <option value=""></option>
                                     <option value="male">Masculino</option>
                                     <option value="female">Feminino</option>
@@ -50,30 +50,30 @@
                             </div>
                             <div class="input-box">
                                 <span class="details">CPF</span>
-                                <input type="text" name="cpf" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1'); "maxlength="11" />
+                                <input type="text" name="cpf" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1'); "maxlength="11" required/>
                             </div>
                             <div class="input-box">
                                 <span class="details">RG</span>
-                                <input type="text" name="rg" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="10" />
+                                <input type="text" name="rg" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="10" required/>
                             </div>
                             <div style="width: 500px" class="input-box">
                                 <span class="details">Endereço</span>
-                                <input type="text" name="address" >
+                                <input type="text" name="address" required>
                             </div>
                             <div style="width: 100px" class="input-box">
                                 <span class="details">Numero</span>
-                                <input type="text" name="addressNumber" >
+                                <input type="text" name="addressNumber" required>
                             </div>
                             <div style="width: 100px" class="input-box">
                                 <span class="details">Cep</span>
-                                <input type="text" name="postalCode" >
+                                <input type="text" name="postalCode" required>
                             </div>
                         </div>
                         <div class="title">Informações do Curso</div>
                         <div class="user-details">
                             <div class="input-box">
                                 <span class="details">Duração</span>
-                                <select class="dropdown" name="courseDuration" >
+                                <select class="dropdown" name="courseDuration" required>
                                     <option value=""></option>
                                     <option value="3">3 meses</option>
                                     <option value="6">6 meses</option>
@@ -82,7 +82,7 @@
                             </div>
                             <div class="input-box">
                                 <span class="details">Número de Aulas</span>
-                                <select class="dropdown" name="numberOfLessons" >
+                                <select class="dropdown" name="numberOfLessons" required>
                                     <option value=""> </option>
                                     <option value="22">22 aulas</option>
                                     <option value="42">42 aulas</option>
@@ -91,34 +91,34 @@
                             </div>
                             <div class="input-box input-number">
                                 <span class="details">Início</span>
-                                <input type="date" name="startDate" >
+                                <input type="date" name="startDate" required>
                             </div>
                             <div class="input-box">
                                 <span class="details">Fim</span>
-                                <input type="date" name="endDate" >
+                                <input type="date" name="endDate" required>
                             </div>
                             <div class="input-box"> 
                                 <span class="details">Começa às</span>
-                                <input type="time" name="startHour" >
+                                <input type="time" name="startHour" required>
                             </div>
                             <div class="input-box"> 
                                 <span class="details">Termina às</span>
-                                <input type="time" name="endHour" >
+                                <input type="time" name="endHour" required>
                             </div>
                             <div class="input-box"> 
                                 <span class="details">Valor total</span>
-                                <input type="number" name="totalPrice" placeholder="R$" >
+                                <input type="number" name="totalPrice" placeholder="R$" required>
                             </div>
                             <div class="input-box"> 
                                 <span class="details">Valor por extenso</span>
-                                <input type="text" name="writeInFull" id="price">
+                                <input type="text" name="writeInFull" id="price" required>
                             </div>
                             <div class="input-box" id="container">
                                 <span class="details">Dia do Pagamento</span>
                             </div>
                             <div class="input-box">
                                 <span class="details">Vezes</span>
-                                <select class="dropdown" name="installments" >
+                                <select class="dropdown" name="installments" required>
                                     <option value=""> </option>
                                     <option value="3">3 vezes</option>
                                     <option value="6">6 vezes</option>
@@ -127,7 +127,7 @@
                                 <div><br></div>
                                 <span class="details">De</span>
                                 <div class="input-box"> 
-                                    <input type="number" name="payments" placeholder="R$" >
+                                    <input type="number" name="payments" placeholder="R$" required>
                                 </div>
                             </div>
                         </div>
@@ -142,7 +142,8 @@
     <script>
         
         let select = document.createElement("select");
-        select.name = "payments";
+        select.name = "payday";
+        select.required = true;
         select.className = "dropdown";
     
         for (let i = 1; i <= 31; i++) {

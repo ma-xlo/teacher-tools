@@ -71,16 +71,16 @@ export default function docxGen(name, calendarLessons, numberOfLessons, fileName
 
     });
 
-    const emptyLine = new SymbolRun({
-        char: "00",
-        size: 30,
-        symbolfont: "Calibri",
+    const emptyLine = new TextRun({
+        text: "  ",
+        font: "Calibri",
+        size: 26,
     });
 
-    const blankCell = new SymbolRun({
-        char: "00",
+    const blankCell = new TextRun({
+        text: "  ",
+        font: "Calibri",
         size: 26,
-        symbolfont: "Calibri",
     });
 
     const tableArrays = [];
@@ -88,8 +88,6 @@ export default function docxGen(name, calendarLessons, numberOfLessons, fileName
     tableArrays.push(
 
         new Paragraph({children: [emptyLine]}),
-        new Paragraph({children: [emptyLine]}),
-
         new Paragraph({
             children: [documentTitle],
             alignment: AlignmentType.CENTER,
@@ -241,8 +239,8 @@ export default function docxGen(name, calendarLessons, numberOfLessons, fileName
                                     new ImageRun({
                                         data: fs.readFileSync("./public/img/logo.png"),
                                         transformation: {
-                                            width: 120,
-                                            height: 120,
+                                            width: 125,
+                                            height: 125,
                                         },
                                     }),
                                 ],
