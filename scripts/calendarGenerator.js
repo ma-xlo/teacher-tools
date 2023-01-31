@@ -3,7 +3,7 @@ import fetch from 'node-fetch';
 import file from 'fs';
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Set", "Oct", "Nov", "Dec"];
-const lessonsCalendar = []
+let lessonsCalendar = []
 let gapInterval = false;
 
 export default async function genFile(name, date, frequency, fileName) {
@@ -113,6 +113,7 @@ export default async function genFile(name, date, frequency, fileName) {
 
     console.log(frequency, lessonsCalendar);
     docxGen(name, lessonsCalendar, numberOfLessons, fileName);
+    lessonsCalendar = [];
 
 }
 
