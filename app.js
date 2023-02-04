@@ -14,7 +14,6 @@ const __dirname = dirname(__filename);
 
 app.use(bodyParser.json()); //Handles JSON requests
 app.use(bodyParser.urlencoded({ extended: true })); //Handles normal post requests
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(generator);
 app.use(registration);
