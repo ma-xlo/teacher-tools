@@ -111,7 +111,6 @@ export default async function genFile(name, date, frequency, fileName) {
         }
     }
 
-    console.log(frequency, lessonsCalendar);
     docxGen(name, lessonsCalendar, numberOfLessons, fileName);
     lessonsCalendar = [];
 
