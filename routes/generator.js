@@ -43,14 +43,18 @@ router.get("/calendar-generator", (req, res) => {
 });
 
 router.get("/download", async (req, res) => {
-  const file = path.join("/tmp", fileName);
-
+  const tempDir = "/tmp";
+  const filePath = path.join(tempDir, fileName);
   setTimeout(() => {
-    res.download(file, (error) => {
-      if (error) console.log("Error: ", error);
-      setTimeout(() => {
-        fs.unlink(path.join(__dirname, "..", "temp", fileName));
-      }, 1000);
+    res.download(filePath, (err) => {
+      if (err) {
+        console.error("Download failed:", err);
+        return res.status(500).send("Could not download file");
+      }
+
+      fs.unlink(filePath, (err) => {
+        if (err) console.error("Error cleaning temp file:", err);
+      });
     });
   }, 2000);
 });
