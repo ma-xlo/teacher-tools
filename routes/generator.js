@@ -43,28 +43,16 @@ router.get("/calendar-generator", (req, res) => {
 });
 
 router.get("/download", async (req, res) => {
-  const filePath = path.join("/tmp", fileName);
+  const file = path.join("/tmp", fileName);
 
-  try {
-    // Example: generateDocx returns a promise that resolves when the file is created
-    await generateDocx(fileName); // make sure this finishes before continuing
-
-    res.download(filePath, (error) => {
-      if (error) {
-        console.log("Download error:", error);
-        return res.status(500).send("Download failed.");
-      }
-
+  setTimeout(() => {
+    res.download(file, (error) => {
+      if (error) console.log("Error: ", error);
       setTimeout(() => {
-        fs.unlink(filePath, (err) => {
-          if (err) console.error("File deletion error:", err);
-        });
+        fs.unlink(path.join(__dirname, "..", "temp", fileName));
       }, 1000);
     });
-  } catch (err) {
-    console.error("Error creating file:", err);
-    res.status(500).send("Failed to generate file.");
-  }
+  }, 2000);
 });
 
 export default router;
